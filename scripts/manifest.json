@@ -1,0 +1,27 @@
+{
+  "app.js": [
+    "src/core/runtime.js",
+    "src/features/auth-base.js",
+    "src/core/shell-base.js",
+    "src/features/transfers-base.js",
+    "src/features/cards-base.js",
+    "src/features/loans-base.js",
+    "src/features/activity-base.js"
+  ],
+  "experience.js": [
+    "src/core/experience-state.js",
+    "src/core/navigation.js",
+    "src/features/auth.js",
+    "src/features/dashboard.js",
+    "src/features/accounts.js",
+    "src/features/transfers.js",
+    "src/features/cards.js",
+    "src/features/loans.js",
+    "src/features/activity.js",
+    "src/features/support.js",
+    "src/core/dialogs.js",
+    "src/core/events.js",
+    "src/features/guide.js",
+    "src/core/bootstrap.js"
+  ]
+}
