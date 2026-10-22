@@ -2,6 +2,19 @@
 
 A responsive, dependency-free demonstration for Kosovo retail banking, with a white and charcoal interface, orange actions and red identity accents. This is an independent design concept, not a ProCredit Bank application or an exact reproduction of its proprietary interface.
 
+## Develop and verify
+
+Requires Node.js 22 or newer. No third-party runtime dependencies.
+
+```sh
+npm ci
+npm run build
+npm test
+npm run dev
+```
+
+Open http://localhost:3000. Edit `src/` and `public/`; the build regenerates `dist/`. See [architecture and production integration plan](docs/ARCHITECTURE.md). The question-mark button in the banking header opens the new step-by-step journey guide.
+
 ## Open locally
 
 Open `dist/index.html` in a browser. Keep the other files in `dist` beside it. Alternatively serve the directory with `python3 -m http.server 3000 --directory dist` and open `http://localhost:3000`.
@@ -30,9 +43,9 @@ Use fictional information only. No bank account is created and no payments, mess
 
 ## Deploy on Vercel
 
-Import this GitHub repository. Select **Other** as the framework, leave the build and install commands empty, and use `dist` as the output directory. `vercel.json` also declares the output directory and basic response headers. No environment variables, database or dependencies are required for the demo.
+Import this GitHub repository. Select **Other** as the framework, use `npm run build` as the build command and `npm ci` as the install command, and use `dist` as the output directory. `vercel.json` also declares the output directory and basic response headers. No environment variables, database or dependencies are required for the demo.
 
-## Files
+## Generated deployment files
 
 - `dist/app.js`: transaction, card and lending calculations and core form handlers.
 - `dist/experience.js`: interface, feature journeys and local data extensions.
